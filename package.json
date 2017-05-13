@@ -1,0 +1,26 @@
+{
+  "name": "medb",
+  "version": "1.0.0",
+  "description": "personal database of movie,etc views, rating, and comments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChadwickTurner/MeDB.git"
+  },
+  "author": "Chadwick Turner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChadwickTurner/MeDB/issues"
+  },
+  "homepage": "https://github.com/ChadwickTurner/MeDB#readme",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.5.1"
+  }
+}
