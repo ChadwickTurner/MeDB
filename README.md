@@ -1,0 +1,2 @@
+# MeDB
+A way to track, manage, and store what you've seen, read, played, etc. along with your ratings and comments. I can never remember what movies I've seen or enjoyed after seeing so many. I want a way to track when I've seen movies and how I felt about them so that I can recall later in conversation or when giving recomendations. The same applies for books, tv shows, video games, board games, restaurants, anything. The goal is to have it apply generally, but the MVP is just with movies.
