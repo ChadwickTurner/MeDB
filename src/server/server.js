@@ -1,17 +1,19 @@
 const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
-const webpackConfig = require('./webpack.config.js');
+const webpackConfig = require(__dirname + '/../../webpack.config.js');
 const app = express();
+const path = require('path');
 
 const compiler = webpack(webpackConfig);
-
-app.use(express.static(__dirname + '/www'));
-
+// console.log("From server:");
+console.log(path.join(__dirname, '/../../'));
+app.use(express.static(path.join(__dirname, '/../../views/')));
+app.use(express.static('public'));
 app.use(webpackDevMiddleware(compiler, {
     hot: true,
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '/public/js',
     stats: {
         colors: true,
     },
@@ -19,7 +21,5 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 
 const server = app.listen(3000, function() {
-    const host = server.address().address;
-    const port = server.address().port;
-    console.log('Example app listening at http://%s:%s', host, port);
+    console.log('Listening at localhost:%s', server.address().port);
 });

@@ -1,28 +1,27 @@
 const path = require('path');
-
+console.log("from config:");
+console.log(path.resolve(__dirname, 'public', 'js'));
 module.exports = {
-    context: path.join(__dirname, 'src'),
     entry: [
-        './index.js',
+        './src/client/index.jsx',
     ],
     output: {
-        path: path.join(__dirname, 'www'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'public','js'),
+        filename: './bundle.js',
     },
     module: {
         rules: [
         {
-            test: /\.js$/,
+            test: /\.jsx$/,
+            loader: 'babel-loader',
             exclude: /node_modules/,
-            use: [
-                'babel-loader',
-            ],
         },
         ],
     },
+    devtool: '#eval-source-map',
     resolve: {
         modules: [
-        path.join(__dirname, 'node_modules'),
+            path.join(__dirname, 'node_modules'),
         ],
     },
 };

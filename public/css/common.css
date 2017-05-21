@@ -1,0 +1,25 @@
+body {
+    background-color: #2222FF;
+}
+
+#HomePanel {
+    background-color: black;
+    display: flex;
+}
+
+#SidePanel {
+    background-color: white;
+    color: black;
+    height: 100%;
+    flex: 1;
+}
+
+#MovieInput {
+    background-color: red;
+    flex: 2;
+}
+
+#MovieOutput {
+    background-color: green;
+    flex: 2;
+}
